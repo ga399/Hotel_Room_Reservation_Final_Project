@@ -1,0 +1,24 @@
+﻿@model Hotel_Room_Reservation_Final_Project.Models.RoomReservation
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Room Reservation</h4>
+<hr />
+
+<h5> Your Booking is successfull The Reservation Number is : RESERV_@Model.Id</h5>
+
+<h6>  Client Name : @Model.Client.FullName   Email: @Model.Client.Email </h6>
+
+<h6>  Hotel : @Model.Hotel.HotelName </h6>
+
+<h6>  Booking Price : $ @Model.Hotel.RoomPrice </h6>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
